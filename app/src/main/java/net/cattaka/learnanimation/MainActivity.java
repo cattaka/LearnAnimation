@@ -38,6 +38,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         ANIMATION_DRAWABLE("Animation Drawable", DaActivity.class),
         VIEW_ANIMATION("View Animation", VaActivity.class),
         PROPERTY_ANIMATION("Property Animation", PaActivity.class),
+        TRANSITION_ANIMATION("Transition Animation", TaActivity.class),
         //
         ;
         final String mLabel;

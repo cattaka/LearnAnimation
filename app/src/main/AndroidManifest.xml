@@ -22,6 +22,7 @@
         <activity android:name=".DaActivity"/>
         <activity android:name=".VaActivity"/>
         <activity android:name=".PaActivity"/>
+        <activity android:name=".TaActivity"/>
     </application>
 
 </manifest>
