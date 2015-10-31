@@ -20,6 +20,8 @@
         <activity android:name=".At1Activity"/>
         <activity android:name=".At2Activity"/>
         <activity android:name=".DaActivity"/>
+        <activity android:name=".VaActivity"/>
+        <activity android:name=".PaActivity"/>
     </application>
 
 </manifest>

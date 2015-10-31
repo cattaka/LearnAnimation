@@ -36,6 +36,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     public enum ActivityItem {
         ACTIVITY_TRANSITION("Activity Transition", At1Activity.class),
         ANIMATION_DRAWABLE("Animation Drawable", DaActivity.class),
+        VIEW_ANIMATION("View Animation", VaActivity.class),
+        PROPERTY_ANIMATION("Property Animation", PaActivity.class),
         //
         ;
         final String mLabel;
