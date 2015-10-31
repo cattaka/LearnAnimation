@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   id="svg10256"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="新規ドキュメント 19">
+  <defs
+     id="defs10258" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-37.125548"
+     inkscape:cy="41.873119"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1030"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10353"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="8px"
+       spacingy="8px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata10261">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-924.36218)">
+    <g
+       transform="matrix(0.02528682,0,0,0.02528682,-58.063696,861.33712)"
+       id="g6625"
+       style="fill-rule:evenodd;visibility:visible">
+      <desc
+         id="desc6627">Group</desc>
+      <g
+         id="g6629">
+        <desc
+           id="desc6631">Drawing</desc>
+        <g
+           id="g6633">
+          <g
+             id="g6635"
+             style="fill:#000000;stroke:none">
+            <path
+               inkscape:connector-curvature="0"
+               id="path6637"
+               d="m 5113,3451 c 568,-875 568,-875 853,146 l -853,-146 z" />
+          </g>
+          <g
+             id="g6639"
+             style="fill:none;stroke:none">
+            <rect
+               id="rect6641"
+               height="786"
+               width="854"
+               y="2812"
+               x="5113" />
+          </g>
+          <g
+             id="g6643" />
+        </g>
+      </g>
+      <g
+         id="g6645">
+        <desc
+           id="desc6647">Drawing</desc>
+        <g
+           id="g6649">
+          <g
+             id="g6651"
+             style="fill:#000000;stroke:none">
+            <path
+               inkscape:connector-curvature="0"
+               id="path6653"
+               d="m 5540,3451 c -570,-876 -570,-931 -854,381 l 854,-381 z" />
+          </g>
+          <g
+             id="g6655"
+             style="fill:none;stroke:none">
+            <rect
+               id="rect6657"
+               height="1017"
+               width="856"
+               y="2816"
+               x="4685" />
+          </g>
+          <g
+             id="g6659" />
+        </g>
+      </g>
+      <g
+         id="g6661">
+        <desc
+           id="desc6663">Drawing</desc>
+        <g
+           id="g6665">
+          <g
+             id="g6667"
+             style="fill:#000000;stroke:none">
+            <path
+               inkscape:connector-curvature="0"
+               id="path6669"
+               d="m 5051,7187 c -140,-1 -266,-6 -381,-15 -117,-10 -221,-23 -315,-40 -96,-18 -182,-40 -257,-66 -79,-27 -148,-59 -207,-94 -63,-39 -116,-81 -159,-128 -46,-49 -82,-103 -109,-160 -27,-56 -46,-116 -58,-181 -12,-59 -17,-123 -17,-190 0,-266 28,-502 70,-717 41,-211 95,-402 150,-578 53,-170 105,-327 145,-478 37,-141 62,-276 62,-414 0,-53 -9,-99 -25,-139 -7,-18 -16,-34 -26,-49 -10,-14 -22,-27 -34,-39 -26,-24 -55,-41 -87,-53 -34,-13 -71,-19 -107,-19 -35,0 -70,6 -103,17 -32,11 -62,27 -88,49 -26,21 -48,47 -64,78 -17,32 -29,71 -33,114 l -1,0 c -9,40 -41,121 -148,114 -117,-8 -131,-109 -133,-144 l -1,0 c 9,-85 32,-160 66,-224 35,-66 82,-121 135,-165 53,-44 113,-76 177,-98 62,-22 128,-32 193,-32 69,0 139,12 203,36 67,25 129,62 183,112 27,25 52,54 74,86 21,31 40,66 56,104 30,71 47,155 47,252 0,162 -28,323 -71,489 -41,156 -95,317 -149,491 -52,167 -104,347 -142,547 -39,198 -64,415 -64,660 0,47 3,93 11,135 7,38 18,74 34,107 15,32 35,61 59,87 27,29 60,55 99,78 43,27 94,50 152,70 64,22 136,40 218,55 85,15 180,27 286,36 106,8 222,13 350,15 l 0,0 c 0,0 0,0 1,0 4,0 7,0 10,0 l 0,0 c 33,4 131,25 130,146 0,122 -100,141 -132,145 l 0,0 z" />
+          </g>
+          <g
+             id="g6671"
+             style="fill:none;stroke:none">
+            <rect
+               id="rect6673"
+               height="3654"
+               width="2060"
+               y="3535"
+               x="3125" />
+          </g>
+          <g
+             id="g6675" />
+        </g>
+      </g>
+      <g
+         id="g6677">
+        <desc
+           id="desc6679">Drawing</desc>
+        <g
+           id="g6681">
+          <g
+             id="g6683"
+             style="fill:#000000;stroke:none">
+            <path
+               inkscape:connector-curvature="0"
+               id="path6685"
+               d="m 5112,3978 c 569,0 1138,874 1138,2332 0,584 -569,875 -1138,875 -568,0 -853,-462 -853,-875 0,-1166 285,-2332 853,-2332 z" />
+          </g>
+          <g
+             id="g6687"
+             style="fill:none;stroke:none">
+            <rect
+               id="rect6689"
+               height="3210"
+               width="1992"
+               y="3977"
+               x="4259" />
+          </g>
+          <g
+             id="g6691" />
+        </g>
+      </g>
+      <g
+         id="g6693">
+        <desc
+           id="desc6695">Drawing</desc>
+        <g
+           id="g6697">
+          <g
+             id="g6699"
+             style="fill:#000000;stroke:none">
+            <path
+               inkscape:connector-curvature="0"
+               id="path6701"
+               d="m 5539,3249 c 569,0 711,583 711,874 0,146 -142,584 -711,584 -427,0 -995,-146 -995,-584 0,-447 426,-874 995,-874 z" />
+          </g>
+          <g
+             id="g6703"
+             style="fill:none;stroke:none">
+            <rect
+               id="rect6705"
+               height="1460"
+               width="1709"
+               y="3248"
+               x="4543" />
+          </g>
+          <g
+             id="g6707" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
