@@ -21,7 +21,8 @@
         <activity android:name=".At2Activity"/>
         <activity android:name=".DaActivity"/>
         <activity android:name=".VaActivity"/>
-        <activity android:name=".PaActivity"/>
+        <activity android:name=".Pa1Activity"/>
+        <activity android:name=".Pa2Activity"/>
         <activity android:name=".TaActivity"/>
     </application>
 

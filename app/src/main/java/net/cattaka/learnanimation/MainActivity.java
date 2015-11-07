@@ -37,7 +37,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         ACTIVITY_TRANSITION("Activity Transition", At1Activity.class),
         ANIMATION_DRAWABLE("Animation Drawable", DaActivity.class),
         VIEW_ANIMATION("View Animation", VaActivity.class),
-        PROPERTY_ANIMATION("Property Animation", PaActivity.class),
+        PROPERTY_ANIMATION_1("Property Animation 1", Pa1Activity.class),
+        PROPERTY_ANIMATION_2("Property Animation 2", Pa2Activity.class),
         TRANSITION_ANIMATION("Transition Animation", TaActivity.class),
         //
         ;

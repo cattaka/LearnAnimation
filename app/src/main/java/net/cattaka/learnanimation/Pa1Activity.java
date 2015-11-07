@@ -16,7 +16,7 @@ import java.util.ArrayList;
 /**
  * Created by takao on 2015/10/28.
  */
-public class PaActivity extends Activity implements View.OnClickListener {
+public class Pa1Activity extends Activity implements View.OnClickListener {
     View mTargetButton;
     AnimationDrawable mRollCatDrawable;
 
