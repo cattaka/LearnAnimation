@@ -40,6 +40,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         PROPERTY_ANIMATION_1("Property Animation 1", Pa1Activity.class),
         PROPERTY_ANIMATION_2("Property Animation 2", Pa2Activity.class),
         TRANSITION_ANIMATION("Transition Animation", TaActivity.class),
+        PROPERTY_ANIMATION_SAMPLE_FLEX_1("Property Animation - Sample Flex 1", PaFlex1Activity.class),
+        PROPERTY_ANIMATION_SAMPLE_FLEX_2("Property Animation - Sample Flex 2", PaFlex2Activity.class),
         //
         ;
         final String mLabel;
