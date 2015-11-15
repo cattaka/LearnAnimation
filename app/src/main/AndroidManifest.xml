@@ -20,10 +20,12 @@
 
         <activity android:name=".At1Activity"/>
         <activity android:name=".At2Activity"/>
-        <activity android:name=".DaActivity"/>
+        <activity android:name=".Da1Activity"/>
+        <activity android:name=".Da2Activity"/>
         <activity android:name=".VaActivity"/>
         <activity android:name=".Pa1Activity"/>
         <activity android:name=".Pa2Activity"/>
+        <activity android:name=".VpaActivity"/>
         <activity android:name=".TaActivity"/>
         <activity android:name=".PaFlex1Activity"/>
         <activity android:name=".PaFlex2Activity"/>

@@ -35,10 +35,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
     public enum ActivityItem {
         ACTIVITY_TRANSITION("Activity Transition", At1Activity.class),
-        ANIMATION_DRAWABLE("Animation Drawable", DaActivity.class),
+        DRAWABLE_ANIMATION_1("Drawable Animation 1", Da1Activity.class),
+        DRAWABLE_ANIMATION_2("Drawable Animation 2", Da2Activity.class),
         VIEW_ANIMATION("View Animation", VaActivity.class),
         PROPERTY_ANIMATION_1("Property Animation 1", Pa1Activity.class),
         PROPERTY_ANIMATION_2("Property Animation 2", Pa2Activity.class),
+        VIEW_PROPERTY_ANIMATOR("View Property Animator", VpaActivity.class),
         TRANSITION_ANIMATION("Transition Animation", TaActivity.class),
         PROPERTY_ANIMATION_SAMPLE_FLEX_1("Property Animation - Sample Flex 1", PaFlex1Activity.class),
         PROPERTY_ANIMATION_SAMPLE_FLEX_2("Property Animation - Sample Flex 2", PaFlex2Activity.class),

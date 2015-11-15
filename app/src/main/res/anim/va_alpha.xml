@@ -3,6 +3,4 @@
     android:interpolator="@android:anim/bounce_interpolator"
     android:duration="3000"
     android:fromAlpha="1"
-    android:toAlpha="0"
-    >
-</alpha>
+    android:toAlpha="0" />
