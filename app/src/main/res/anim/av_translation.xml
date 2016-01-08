@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:startDelay="500"
+    android:duration="2000"
+    android:propertyName="translateX"
+    android:valueFrom="80"
+    android:valueTo="-20"
+    android:repeatCount="0"/>

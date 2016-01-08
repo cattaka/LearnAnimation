@@ -1,16 +1,8 @@
 package net.cattaka.learnanimation;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.BounceInterpolator;
-
-import java.util.ArrayList;
 
 /**
  * Created by takao on 2015/10/28.

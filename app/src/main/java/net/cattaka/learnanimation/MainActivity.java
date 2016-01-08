@@ -34,7 +34,10 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     }
 
     public enum ActivityItem {
+        ACTIVITY_ANIMATION("Activity Animation", Aa1Activity.class),
         ACTIVITY_TRANSITION("Activity Transition", At1Activity.class),
+        FRAGMENT_ANIMATION("Fragment Animation", FaActivity.class),
+        FRAGMENT_TRANSITION("Fragment Transition", FtActivity.class),
         DRAWABLE_ANIMATION_1("Drawable Animation 1", Da1Activity.class),
         DRAWABLE_ANIMATION_2("Drawable Animation 2", Da2Activity.class),
         VIEW_ANIMATION("View Animation", VaActivity.class),
@@ -44,6 +47,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         TRANSITION_ANIMATION("Transition Animation", TaActivity.class),
         PROPERTY_ANIMATION_SAMPLE_FLEX_1("Property Animation - Sample Flex 1", PaFlex1Activity.class),
         PROPERTY_ANIMATION_SAMPLE_FLEX_2("Property Animation - Sample Flex 2", PaFlex2Activity.class),
+        ANIMATION_VECTOR("Animation Vector", AvActivity.class),
         //
         ;
         final String mLabel;

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <Button
         android:id="@+id/button_target"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Animate me!!" />
+        android:text="Animate me!!"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="From code"
-        android:textAppearance="?android:textAppearanceLarge" />
+        android:textAppearance="?android:textAppearanceLarge"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,48 +26,48 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Move" />
+            android:text="Move"/>
 
         <Button
             android:id="@+id/button_rotate_code"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rotate" />
+            android:text="Rotate"/>
 
         <Button
             android:id="@+id/button_scale_code"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Scale" />
+            android:text="Scale"/>
 
         <Button
             android:id="@+id/button_alpha_code"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Alpha" />
+            android:text="Alpha"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/button_all_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="All" />
+        android:text="All"/>
 
     <Button
         android:id="@+id/button_all_share_interpolator_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="All(Share interpolator)" />
+        android:text="All(Share interpolator)"/>
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="From xml"
-        android:textAppearance="?android:textAppearanceLarge" />
+        android:textAppearance="?android:textAppearanceLarge"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,33 +78,33 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Move" />
+            android:text="Move"/>
 
         <Button
             android:id="@+id/button_rotate_xml"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rotate" />
+            android:text="Rotate"/>
 
         <Button
             android:id="@+id/button_scale_xml"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Scale" />
+            android:text="Scale"/>
 
         <Button
             android:id="@+id/button_alpha_xml"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Alpha" />
+            android:text="Alpha"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/button_all_xml"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="All" />
+        android:text="All"/>
 </LinearLayout>

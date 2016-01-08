@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <View
+        android:id="@+id/anchor"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/anchor"
         android:layout_centerInParent="true"
         />
 
@@ -15,24 +16,24 @@
         android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ctklabo_rb256"
+        android:layout_alignEnd="@+id/anchor"
         android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/anchor"/>
+        android:src="@drawable/ctklabo_rb256"/>
 
     <Button
         android:id="@+id/button_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button A"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/anchor"/>
+        android:layout_toEndOf="@+id/anchor"
+        android:text="Button A"/>
 
     <Button
+        android:id="@+id/button_excluded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_excluded"
-        android:text="Excluded"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:text="Excluded"/>
 
 </RelativeLayout>

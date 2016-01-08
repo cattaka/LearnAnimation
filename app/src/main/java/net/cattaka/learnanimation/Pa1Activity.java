@@ -9,7 +9,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.BounceInterpolator;
-import android.widget.AdapterView;
 
 import java.util.ArrayList;
 

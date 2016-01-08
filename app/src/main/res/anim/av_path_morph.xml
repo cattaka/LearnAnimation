@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:propertyName="pathData"
+    android:valueFrom="M 80,0 24,24 0,80 l 24,56 56,24 56,-24 0,0 -56,-56 56,-56 0,0 -56,-24 -56,24 z"
+    android:valueTo="M 80,0 24,24 0,80 l 24,56 56,24 56,-24 24,-56 -80,0 80,0 -24,-56 -56,-24 -56,24 z"
+    android:valueType="pathType"
+    android:repeatMode="reverse"
+    android:repeatCount="1"/>

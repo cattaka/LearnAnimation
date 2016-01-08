@@ -18,8 +18,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Aa1Activity"/>
+        <activity android:name=".Aa2Activity"/>
         <activity android:name=".At1Activity"/>
         <activity android:name=".At2Activity"/>
+        <activity android:name=".FtActivity"/>
         <activity android:name=".Da1Activity"/>
         <activity android:name=".Da2Activity"/>
         <activity android:name=".VaActivity"/>
@@ -29,6 +32,8 @@
         <activity android:name=".TaActivity"/>
         <activity android:name=".PaFlex1Activity"/>
         <activity android:name=".PaFlex2Activity"/>
+        <activity android:name=".FaActivity" android:theme="@style/Theme.AppCompat"/>
+        <activity android:name=".AvActivity"/>
     </application>
 
 </manifest>

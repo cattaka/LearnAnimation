@@ -6,9 +6,9 @@ import android.transition.Scene;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
 import android.transition.TransitionManager;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * Created by takao on 2015/10/28.
@@ -30,14 +30,24 @@ public class TaActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.button_item_1) {
-            View childView = LayoutInflater.from(this).inflate(R.layout.activity_ta_child_logo, null);
-            Scene scene = new Scene(mContainerLayout, childView);
-            Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.ta_logo);
+            Scene scene = Scene.getSceneForLayout(mContainerLayout, R.layout.activity_ta_child_logo, this);
+            scene.setEnterAction(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(TaActivity.this, "Enter action", Toast.LENGTH_SHORT).show();
+                }
+            });
+            scene.setExitAction(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(TaActivity.this, "Exit action", Toast.LENGTH_SHORT).show();
+                }
+            });
+            Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.ta);
             TransitionManager.go(scene, transition);
         } else if (view.getId() == R.id.button_item_2) {
-            View childView = LayoutInflater.from(this).inflate(R.layout.activity_ta_child_rb, null);
-            Scene scene = new Scene(mContainerLayout, childView);
-            Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.ta_rb);
+            Scene scene = Scene.getSceneForLayout(mContainerLayout, R.layout.activity_ta_child_rb, this);
+            Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.ta);
             TransitionManager.go(scene, transition);
         }
     }
