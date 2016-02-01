@@ -4,14 +4,20 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <net.cattaka.learnanimation.view.CustomPropertyView
-        android:id="@+id/text_target"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Animate me!!"
-        android:textAppearance="?android:textAppearanceLarge"
-        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <net.cattaka.learnanimation.view.CustomPropertyView
+            android:id="@+id/text_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Animate me!!"
+            android:textAppearance="?android:textAppearanceLarge"
+            />
+    </FrameLayout>
 
     <TextView
         android:layout_width="match_parent"
