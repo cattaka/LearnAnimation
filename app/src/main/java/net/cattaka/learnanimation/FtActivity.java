@@ -1,7 +1,6 @@
 package net.cattaka.learnanimation;
 
 import android.os.Bundle;
-import android.support.transition.ChangeBounds;
 import android.support.transition.Fade;
 import android.support.transition.TransitionSet;
 import android.support.v4.app.Fragment;
@@ -12,6 +11,7 @@ import android.view.ViewGroup;
 
 import net.cattaka.learnanimation.fragment.Ft1Fragment;
 import net.cattaka.learnanimation.fragment.Ft2Fragment;
+import net.cattaka.learnanimation.transition.SourceChangeBounds;
 
 /**
  * Created by takao on 2015/10/28.
@@ -36,8 +36,8 @@ public class FtActivity extends AppCompatActivity implements View.OnClickListene
             Fragment fragment = Ft1Fragment.newInstance();
             fragment.setEnterTransition(new Fade(Fade.IN));
             fragment.setExitTransition(new Fade(Fade.OUT));
-            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new ChangeBounds()));
-            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new ChangeBounds()));
+            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
+            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
 
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
@@ -55,8 +55,8 @@ public class FtActivity extends AppCompatActivity implements View.OnClickListene
             Fragment fragment = Ft2Fragment.newInstance();
             fragment.setEnterTransition(new Fade(Fade.IN));
             fragment.setExitTransition(new Fade(Fade.OUT));
-            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new ChangeBounds()));
-            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new ChangeBounds()));
+            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
+            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
 
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
