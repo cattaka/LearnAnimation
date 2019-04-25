@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.TypeConverter;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Path;
@@ -13,14 +12,12 @@ import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.transition.ChangeBounds;
+import android.support.transition.Transition;
 import android.support.transition.TransitionValues;
 import android.support.v4.view.ViewCompat;
-import android.util.AttributeSet;
 import android.util.Property;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,13 +25,17 @@ import android.view.ViewParent;
 
 import net.cattaka.learnanimation.R;
 
-public class SourceChangeBounds extends ChangeBounds {
+public class SourceChangeBounds extends Transition {
+    private boolean fitLeft = true;
+    private boolean fitTop = true;
+    private boolean fitRight = true;
+    private boolean fitBottom = true;
 
-    public SourceChangeBounds() {
-    }
-
-    public SourceChangeBounds(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public SourceChangeBounds(boolean fitLeft, boolean fitTop, boolean fitRight, boolean fitBottom) {
+        this.fitLeft = fitLeft;
+        this.fitTop = fitTop;
+        this.fitRight = fitRight;
+        this.fitBottom = fitBottom;
     }
 
     public void captureStartValues(@NonNull TransitionValues transitionValues) {
@@ -100,13 +101,12 @@ public class SourceChangeBounds extends ChangeBounds {
             Bitmap bitmap = Bitmap.createBitmap(fromView.getWidth(), fromView.getHeight(), Bitmap.Config.ARGB_8888);
             Canvas canvas = new Canvas(bitmap);
             fromView.draw(canvas);
-            final BitmapDrawable drawable = new BitmapDrawable(bitmap);
-            DrawableWrapper drawableWrapper = new DrawableWrapper(drawable);
+            final ClipableBitmapDrawable drawable = new ClipableBitmapDrawable(bitmap, fitLeft, fitTop, fitRight, fitBottom);
             final float transitionAlpha = getTransitionAlpha(toView);
             setTransitionAlpha(toView, 0.0F);
             sceneRoot.getOverlay().add(drawable);
 
-            ObjectAnimator anim = ObjectAnimator.ofObject(drawable, "bounds", mRectTypeEvaluator,
+            ObjectAnimator anim = ObjectAnimator.ofObject(drawable, "pseudoBounds", mRectTypeEvaluator,
                     new Rect(startBounds.left, startBounds.top, startBounds.right, startBounds.bottom),
                     new Rect(endBounds.left, endBounds.top, endBounds.right, endBounds.bottom)
             );
@@ -142,22 +142,57 @@ public class SourceChangeBounds extends ChangeBounds {
         v.setBottom(bottom);
     }
 
-    private static class DrawableWrapper {
-        private Drawable mDrawable;
+    private class ClipableBitmapDrawable extends BitmapDrawable {
+        private boolean fitLeft = true;
+        private boolean fitTop = true;
+        private boolean fitRight = true;
+        private boolean fitBottom = true;
+        private Rect pseudoBounds = new Rect();
 
-        public DrawableWrapper(Drawable drawable) {
-            mDrawable = drawable;
+        public ClipableBitmapDrawable(Bitmap bitmap, boolean fitLeft, boolean fitTop, boolean fitRight, boolean fitBottom) {
+            super(bitmap);
+            this.fitLeft = fitLeft;
+            this.fitTop = fitTop;
+            this.fitRight = fitRight;
+            this.fitBottom = fitBottom;
         }
 
         @Keep
-        public void setBounds(int[] value) {
-            mDrawable.setBounds(value[0], value[1], value[2], value[3]);
+        public Rect getPseudoBounds() {
+            return pseudoBounds;
         }
 
         @Keep
-        public int[] getBounds() {
-            Rect b = mDrawable.getBounds();
-            return new int[]{b.left, b.top, b.right, b.top};
+        public void setPseudoBounds(Rect pseudoBounds) {
+            this.pseudoBounds.set(pseudoBounds);
+            updateBounds();
+        }
+
+        public void updateBounds() {
+            Bitmap bitmap = getBitmap();
+            int l = pseudoBounds.left;
+            int t = pseudoBounds.top;
+            int r = pseudoBounds.right;
+            int b = pseudoBounds.bottom;
+            if (fitLeft && !fitRight) {
+                r = l + bitmap.getWidth();
+            } else if (!fitLeft && fitRight) {
+                l = r - bitmap.getWidth();
+            }
+            if (fitTop && !fitBottom) {
+                b = t + bitmap.getHeight();
+            } else if (!fitTop && fitBottom) {
+                t = b - bitmap.getHeight();
+            }
+            this.setBounds(l, t, r, b);
+        }
+
+        @Override
+        public void draw(Canvas canvas) {
+            canvas.save();
+            canvas.clipRect(pseudoBounds);
+            super.draw(canvas);
+            canvas.restore();
         }
     }
 

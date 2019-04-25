@@ -15,8 +15,8 @@
 
     <ImageView
         android:id="@+id/image_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignEnd="@+id/anchor"
         android:layout_centerVertical="true"
         android:src="@drawable/ctklabo_rb256"
