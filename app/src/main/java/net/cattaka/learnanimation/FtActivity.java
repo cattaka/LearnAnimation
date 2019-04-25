@@ -48,6 +48,7 @@ public class FtActivity extends AppCompatActivity implements View.OnClickListene
                 View aButton = currentFragment.getView().findViewById(R.id.button_a);
                 ft.addSharedElement(aButton, aButton.getTransitionName());
             }
+            ft.setCustomAnimations(R.anim.no_anim, R.anim.no_anim, R.anim.no_anim, R.anim.no_anim);
             ft.replace(R.id.layout_fragment, fragment);
             ft.addToBackStack(null);
             ft.commit();
@@ -67,6 +68,7 @@ public class FtActivity extends AppCompatActivity implements View.OnClickListene
                 View aButton = currentFragment.getView().findViewById(R.id.button_a);
                 ft.addSharedElement(aButton, aButton.getTransitionName());
             }
+            ft.setCustomAnimations(R.anim.no_anim, R.anim.no_anim, R.anim.no_anim, R.anim.no_anim);
             ft.replace(R.id.layout_fragment, fragment);
             ft.addToBackStack(null);
             ft.commit();
