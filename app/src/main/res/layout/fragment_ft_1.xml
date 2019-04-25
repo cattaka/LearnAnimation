@@ -28,4 +28,13 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:text="Excluded"/>
+
+    <Button
+        android:id="@+id/button_source_fade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="SourceFade"
+        android:transitionName="transition:button_source_fade" />
 </RelativeLayout>

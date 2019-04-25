@@ -3,39 +3,25 @@ package net.cattaka.learnanimation.transition;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
-import android.animation.TypeConverter;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Path;
 import android.graphics.Point;
-import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.transition.Transition;
 import android.support.transition.TransitionValues;
 import android.support.v4.view.ViewCompat;
-import android.util.Property;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
 import net.cattaka.learnanimation.R;
 
-public class SourceChangeBounds extends Transition {
-    private boolean fitLeft = true;
-    private boolean fitTop = true;
-    private boolean fitRight = true;
-    private boolean fitBottom = true;
+public class SourceFade extends Transition {
 
-    public SourceChangeBounds(boolean fitLeft, boolean fitTop, boolean fitRight, boolean fitBottom) {
-        this.fitLeft = fitLeft;
-        this.fitTop = fitTop;
-        this.fitRight = fitRight;
-        this.fitBottom = fitBottom;
+    public SourceFade() {
     }
 
     public void captureStartValues(@NonNull TransitionValues transitionValues) {
@@ -92,22 +78,20 @@ public class SourceChangeBounds extends Transition {
             final View toView = endValues.view;
             final View fromView = startValues.view;
             Rect startBounds = (Rect) startValues.values.get("android:changeBounds:bounds");
-            Rect endBounds = (Rect) endValues.values.get("android:changeBounds:bounds");
-            Point startOffset = (Point) startValues.values.get("android:changeBounds:offset");
-            Point endOffset = (Point) endValues.values.get("android:changeBounds:offset");
+            // Rect endBounds = (Rect) endValues.values.get("android:changeBounds:bounds");
 
             Bitmap bitmap = Bitmap.createBitmap(fromView.getWidth(), fromView.getHeight(), Bitmap.Config.ARGB_8888);
             Canvas canvas = new Canvas(bitmap);
             fromView.draw(canvas);
-            final ClipableBitmapDrawable drawable = new ClipableBitmapDrawable(bitmap, fitLeft, fitTop, fitRight, fitBottom);
+            final BitmapDrawable drawable = new BitmapDrawable(bitmap);
             final float transitionAlpha = getTransitionAlpha(toView);
             setTransitionAlpha(toView, 0.0F);
             sceneRoot.getOverlay().add(drawable);
 
-            ObjectAnimator anim = ObjectAnimator.ofObject(drawable, "pseudoBounds", mRectTypeEvaluator,
-                    new Rect(startBounds.left, startBounds.top, startBounds.right, startBounds.bottom),
-                    new Rect(endBounds.left, endBounds.top, endBounds.right, endBounds.bottom)
-            );
+            if (startBounds != null) {
+                drawable.setBounds(startBounds);
+            }
+            ObjectAnimator anim = ObjectAnimator.ofInt(drawable, "alpha", 255, 0);
             anim.addListener(new AnimatorListenerAdapter() {
                 public void onAnimationEnd(Animator animation) {
                     sceneRoot.getOverlay().remove(drawable);
@@ -131,73 +115,6 @@ public class SourceChangeBounds extends Transition {
         } else {
             view.setAlpha(alpha);
         }
-    }
-
-    public static void setLeftTopRightBottom(View v, int left, int top, int right, int bottom) {
-        v.setLeft(left);
-        v.setTop(top);
-        v.setRight(right);
-        v.setBottom(bottom);
-    }
-
-    private class ClipableBitmapDrawable extends BitmapDrawable {
-        private boolean fitLeft = true;
-        private boolean fitTop = true;
-        private boolean fitRight = true;
-        private boolean fitBottom = true;
-        private Rect pseudoBounds = new Rect();
-
-        public ClipableBitmapDrawable(Bitmap bitmap, boolean fitLeft, boolean fitTop, boolean fitRight, boolean fitBottom) {
-            super(bitmap);
-            this.fitLeft = fitLeft;
-            this.fitTop = fitTop;
-            this.fitRight = fitRight;
-            this.fitBottom = fitBottom;
-        }
-
-        @Keep
-        public Rect getPseudoBounds() {
-            return pseudoBounds;
-        }
-
-        @Keep
-        public void setPseudoBounds(Rect pseudoBounds) {
-            this.pseudoBounds.set(pseudoBounds);
-            updateBounds();
-        }
-
-        public void updateBounds() {
-            Bitmap bitmap = getBitmap();
-            int l = pseudoBounds.left;
-            int t = pseudoBounds.top;
-            int r = pseudoBounds.right;
-            int b = pseudoBounds.bottom;
-            if (fitLeft && !fitRight) {
-                r = l + bitmap.getWidth();
-            } else if (!fitLeft && fitRight) {
-                l = r - bitmap.getWidth();
-            }
-            if (fitTop && !fitBottom) {
-                b = t + bitmap.getHeight();
-            } else if (!fitTop && fitBottom) {
-                t = b - bitmap.getHeight();
-            }
-            this.setBounds(l, t, r, b);
-        }
-
-        @Override
-        public void draw(Canvas canvas) {
-            canvas.save();
-            canvas.clipRect(pseudoBounds);
-            super.draw(canvas);
-            canvas.restore();
-        }
-    }
-
-    RectEvaluator mRectTypeEvaluator = new RectEvaluator();
-
-    static PropertyValuesHolder ofPointF(Property<?, PointF> property, Path path) {
-        return PropertyValuesHolder.ofObject(property, (TypeConverter) null, path);
     }
 }
 
