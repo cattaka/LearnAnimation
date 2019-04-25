@@ -36,8 +36,8 @@ public class FtActivity extends AppCompatActivity implements View.OnClickListene
             Fragment fragment = Ft1Fragment.newInstance();
             fragment.setEnterTransition(new Fade(Fade.IN));
             fragment.setExitTransition(new Fade(Fade.OUT));
-            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
-            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
+            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new SourceChangeBounds(true, true, true, true)));
+            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new SourceChangeBounds(true, true, true, true)));
 
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
@@ -55,8 +55,8 @@ public class FtActivity extends AppCompatActivity implements View.OnClickListene
             Fragment fragment = Ft2Fragment.newInstance();
             fragment.setEnterTransition(new Fade(Fade.IN));
             fragment.setExitTransition(new Fade(Fade.OUT));
-            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
-            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new SourceChangeBounds()));
+            fragment.setSharedElementEnterTransition(new TransitionSet().addTransition(new SourceChangeBounds(true, true, true, true)));
+            fragment.setSharedElementReturnTransition(new TransitionSet().addTransition(new SourceChangeBounds(true, true, true, true)));
 
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
